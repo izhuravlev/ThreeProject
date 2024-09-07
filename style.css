@@ -1,5 +1,71 @@
+:root {
+  --dark-bg: rgb(18, 5, 47);
+  --spacing: 5rem;
+}
+
 canvas {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+main {
+  position: absolute;
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  margin: 0px auto;
+  padding: 120px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1,
+h2,
+blockquote,
+p {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+header {
+  background: var(--dark-bg);
+  grid-column: 2 / span 5;
+  font-size: 2.5rem;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
+}
+
+section {
+  grid-column: 2/8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+section.right {
+  grid-column: 6/12;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+}
+
+blockquote.center {
+  margin: 0;
+  padding: 0;
+  grid-column: 6 / 9;
+  margin-bottom: var(--spacing);
 }
